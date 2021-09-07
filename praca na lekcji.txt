@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+int tablica[100];
+
+srand(time(NULL));
+
+for(int i=0;i<100;i++)
+
+{
+
+tablica[100]=rand()%100 + 1;
+
+cout<<tablica[100]<<endl;
+
+}
+
+    return 0;
+}
