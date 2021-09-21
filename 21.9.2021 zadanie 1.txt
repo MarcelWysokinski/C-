@@ -1,0 +1,42 @@
+
+#include <iostream>
+using namespace std;
+
+int a, b, d, f, m, n, q, x;
+
+void dod(int a,int b) {
+   
+    cin >> a >> b;
+    cout << a + b << endl;
+   
+
+}
+
+void ode(int d, int f) {
+   
+    cin >> d >> f;
+    cout << d - f << endl;
+}
+
+void mno(int m, int n) {
+   
+    cin >>n >>m;
+    cout << m * n << endl;
+
+}
+
+void dzie(int q, int x) {
+   
+    cin >> q >> x;
+    cout << q / x << endl;
+}
+
+
+int main()
+{
+    dod(4, 5);
+     ode(1,0);
+     mno(3, 3);
+     dzie(4,2);
+
+}
