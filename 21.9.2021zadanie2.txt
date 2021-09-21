@@ -1,0 +1,78 @@
+
+#include <iostream>
+using namespace std;
+
+int podaj,podaj1,podaj2;
+
+void kwadrat() {
+    cout << "Podaj a aby obliczyc pole kwadratu" << endl;
+    cin >> podaj;
+    cout << podaj * podaj <<endl;
+
+    cout << "Podaj bok kwadratu aby obliczyć sume bokow" << endl;
+    cin >> podaj;
+    cout << podaj +podaj + podaj + podaj << endl;
+
+}
+
+void prostokat() {
+    cout << "Podaj a i b aby oliczyc pole prostokata" << endl;
+    cin >> podaj >> podaj1;
+    cout << podaj * podaj1 <<endl;
+
+    cout << "Podaj a i b aby obliczyc sume bokow " << endl;
+    cin >> podaj >> podaj1;
+    cout << podaj * podaj + podaj1 * podaj1 << endl;
+}
+
+void trojkat() {
+    cout << "Podaj 2 zmienne trojkata aby obliczyc sume bokow oraz pole" << endl;
+    cin >> podaj >> podaj1;
+    cout << podaj * podaj1 / 2 <<endl;
+    cout << (podaj * podaj1 / 2) * 2 << endl;
+}
+
+void pro() {
+    cout << "Podaj a i b trojkata" << endl;
+    cin >> podaj >> podaj1;
+    cout << podaj * podaj1 / 2 << endl;
+
+    cout << "Podaj trzy boki aby obliczyc obwod" << endl;
+    cin >> podaj >> podaj1 >> podaj2;
+    cout << podaj + podaj1 + podaj2 << endl;
+
+}
+
+void rowno() {
+    cout << "Podaj a i b oraz h " << endl;
+    cin >> podaj >> podaj1 >>podaj2;
+    cout << (podaj + podaj1)/2 *podaj2 << endl;
+
+    cout << "Podaj a i b oraz c" >> endl;
+    cin >> podaj >> podaj1 >> podaj2;
+    cout << (podaj*podaj) + (podaj1*podaj1) + (podaj2*podaj2) <<endl;
+
+
+
+}
+
+void romb() {
+    cout << "podaj a i h" << endl;
+    cin >> podaj >> podaj1;
+    cout << podaj * podaj1 << endl;
+
+    cout << "podaj a dzięki ktoremu obliczymy obwod rombu" << endl;
+    cin << podaj;
+    cout << podaj * 4;
+}
+
+int main()
+{
+
+    kwadrat();
+    prostokat();
+    trojkat();
+    pro();
+    rowno();
+    romb();
+}
