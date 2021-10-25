@@ -1,0 +1,424 @@
+// Marcel Wysokiński oraz Oscar wiliwis
+#include <cstdlib>
+#include <iostream>
+#include <conio.h>
+#include <locale.h>
+#include <time.h>
+#include <windows.h>
+#include <math.h>
+
+using namespace std;
+
+int liczbag, wybor,i,liczba,liczba2,liczba3,liczba4,suma,suma1,suma_,j,liczba5,liczba6,suma2,liczba7,liczba8,suma3,liczba9,liczba10,liczba11,liczba12,liczba13,liczba14,liczba15,liczba16,suma4,suma5,suma6,suma7,suma8,suma9,suma10,suma11,dod,dod1;
+string nickname;
+string nick1;
+string nick2;
+string nick3;
+
+void gracze() {
+	
+	cout << "Gra od 2-4 graczy" << endl;
+	cout << "Podaj ile jest graczy: " << endl;
+	cin >> liczbag;
+
+	if (liczbag == 2) {
+		system("cls");
+		cout << "Mam nadzieje, że wasza dwójka będzie zadowolona z przebiegu gry :)" << endl;
+	}
+	else if (liczbag == 3) {
+		system("cls");
+		cout << "Mam nadzieje, że wasza trójka będzie się świetnie bawić :)" << endl;
+	}
+	else if (liczbag == 4) {
+		system("cls");
+		cout << "Wydaje mi sie, że gra w czwórke jest świetna, bawcie się dobrze :)" << endl;
+	}
+	else if (liczbag > 4) {
+		system("cls");
+		cout << "Za duża ilość graczy, prosimy o zmniejszenie  ilości graczy." << endl;
+		gracze();
+	}
+	else {
+		system("cls");
+		cout << "Za mało graczy, znajdź kogoś do gry :(" << endl;
+		gracze();
+	}
+}
+void nick() {
+	if (liczbag == 2) {
+		cout << "Podaj nick graczu 1" << endl;
+		cin >> nickname;
+		cout << "Podaj nick graczu 2" << endl;
+		cin >> nick1;
+		system("cls");
+		cout << "Witajcie w naszej grze kościannej miło mi cie gościć  " << nickname << " jak również ciebie " << nick1 << endl;
+		
+	}
+	else if (liczbag == 3) {
+		cout << "Podaj nick graczu 1" << endl;
+		cin >> nickname;
+		cout << "Podaj nick graczu 2" << endl;
+		cin >> nick1;
+		cout << "Podaj nick graczu 3" << endl;
+		cin >> nick2;
+		system("cls");
+		cout << "Witajcie w naszej grze kościannej miło mi cie gościć  " << nickname << " jak również ciebie " << nick1 << " i " << nick2 << endl;
+		
+	}
+	else if (liczbag == 4) {
+		cout << "Podaj nick graczu 1" << endl;
+		cin >> nickname;
+		cout << "Podaj nick graczu 2" << endl;
+		cin >> nick1;
+		cout << "Podaj nick graczu 3" << endl;
+		cin >> nick2;
+		cout << "Podaj nick graczu 3" << endl;
+		cin >> nick3;
+		system("cls");
+		cout << "Witajcie w naszej grze kościannej miło mi cie gościć  " << nickname << " jak również was " << nick1 << ", " << nick2 << " i " << nick3 << endl;
+		
+	}
+}
+
+void gracze2() {
+	
+	for (i = 0; i < 6;i++) {
+		cout << "Runda "<< i + 1 << endl;
+		liczba = rand() % 6 + 1;
+		liczba2 = rand() % 6 + 1;
+		liczba3 = rand() % 6 + 1;
+		liczba4 = rand() % 6 + 1;
+		cout << "Gracz " << nickname << " wyrzucił " << liczba << " oraz " << liczba2 << endl;
+		cout << "Gracz " << nick1 << " wyrzucił " << liczba3 << " oraz " << liczba4 << endl;
+		suma = liczba + liczba2;
+		suma1 = liczba3 + liczba4;
+		cout << "Suma gracza "<< nickname << " wynosi " << suma << endl;
+		cout << "Suma gracza " << nick1 << " wynosi " << suma1 << endl;
+		getchar();
+
+		if (suma==suma1) {
+			dod = liczba + liczba2;
+			dod1 = liczba3 + liczba4;
+			cout << "Dodatkowy rzut! REMIS" << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba << " oraz " << liczba2 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba3 << " oraz " << liczba4 << endl;
+			cout << "Suma gracza " << nickname << " wynosi " << dod << endl;
+			cout << "Suma gracza " << nick1 << " wynosi " << dod1 << endl;
+			getchar();
+		}
+		if (suma > suma1) {
+			cout << "Gracz " << nickname << " wygrywa runde: " << i +1 <<endl;
+			getchar();
+		}
+		else if (suma<suma1) {
+			cout << "Gracz " << nick1 << " wygrywa runde: " << i+1 <<endl;
+			getchar();
+		}
+		Sleep(3500);
+	}
+	getchar();
+	
+}
+void gracze3() {
+	for (i = 0; i < 6; i++) {
+		cout << "Runda " << i + 1 << endl;
+		liczba = rand() % 6 + 1;
+		liczba2 = rand() % 6 + 1;
+		liczba3 = rand() % 6 + 1;
+		liczba4 = rand() % 6 + 1;
+		liczba5 = rand() % 6 + 1;
+		liczba6 = rand() % 6 + 1;
+		cout << "Gracz " << nickname << " wyrzucił " << liczba << " oraz " << liczba2 << endl;
+		cout << "Gracz " << nick1 << " wyrzucił " << liczba3 << " oraz " << liczba4 << endl;
+		cout << "Gracz " << nick2 << " wyrzucił " << liczba5 << " oraz " << liczba6 << endl;
+		suma = liczba + liczba2;
+		suma1 = liczba3 + liczba4;
+		suma2 = liczba5 + liczba6;
+		cout << "Suma gracza " << nickname << " " << suma << endl;
+		cout << "Suma gracza " << nick1 << " " << suma1 << endl;
+		cout << "Suma gracza " << nick2 << " " << suma2 << endl;
+		getchar();
+
+		if (suma > suma1) {
+			cout << "Gracz " << nickname << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma < suma1) {
+			cout << "Gracz " << nick1 << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma < suma2) {
+			cout << "Gracz " << nick2 << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma2 < suma) {
+			cout << "Gracz " << nickname << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma2 < suma1) {
+			cout << "Gracz " << nick1 << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma1 < suma2) {
+			cout << "Gracz " << nick2 << " wygrywa runde: " << i + 1 << endl;
+		}
+		if (suma==suma1) {
+			liczba7 = rand() % 6 + 1;
+			liczba8 = rand() % 6 + 1;
+			liczba9 = rand() % 6 + 1;
+			liczba10 = rand() % 6 + 1;
+			suma3 = liczba7 + liczba8;
+			suma4 = liczba9 + liczba10;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami "<< nickname <<" oraz " << nick1 << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nickname << " " << suma3 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma4 << endl;
+			getchar();
+		}
+		else if (suma1==suma2){
+			liczba7 = rand() % 6 + 1;
+			liczba8 = rand() % 6 + 1;
+			liczba9 = rand() % 6 + 1;
+			liczba10 = rand() % 6 + 1;
+			liczba11 = rand() % 6 + 1;
+			liczba12 = rand() % 6 + 1;
+			suma5 = liczba7 + liczba8;
+			suma6 = liczba9 + liczba10;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nick1 << " oraz " << nick2 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick2 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma5 << endl;
+			cout << "Suma gracza " << nick2 << " " << suma6 << endl;
+			getchar();
+		}
+		else if (suma == suma2) {
+			liczba7 = rand() % 6 + 1;
+			liczba8 = rand() % 6 + 1;
+			liczba9 = rand() % 6 + 1;
+			liczba10 = rand() % 6 + 1;
+			suma7 = liczba7 + liczba8;
+			suma8 = liczba9 + liczba10;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nickname << " oraz " << nick2 << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick2 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma7 << endl;
+			cout << "Suma gracza " << nick2 << " " << suma8 << endl;
+			getchar();
+		}
+		else if (suma == suma1 && suma1 == suma2) {
+			
+
+			suma9 = liczba7 + liczba8;
+			suma10 = liczba9 + liczba10;
+			suma11 = liczba11 + liczba12;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Gracz " << nick2 << " wyrzucił " << liczba11 << " oraz " << liczba12 << endl;
+			cout << "Suma gracza " << nickname << " " << suma9 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma10 << endl;
+			cout << "Suma gracza " << nick2 << " " << suma11 << endl;
+
+			getchar();
+		}
+		Sleep(3500);
+	}
+}
+void gracze4() {
+	for (i = 0; i < 6; i++) {
+		cout << "Runda " << i + 1 << endl;
+		liczba = rand() % 6 + 1; 
+		liczba2 = rand() % 6 + 1;
+		liczba3 = rand() % 6 + 1;
+		liczba4 = rand() % 6 + 1;
+		liczba5 = rand() % 6 + 1;
+		liczba6 = rand() % 6 + 1;
+		liczba7 = rand() % 6 + 1;
+		liczba8 = rand() % 6 + 1;
+		getchar();
+		cout << "Gracz " << nickname << " wyrzucił " << liczba << " oraz " << liczba2 << endl;
+		cout << "Gracz " << nick1 << " wyrzucił " << liczba3 << " oraz " << liczba4 << endl;
+		cout << "Gracz " << nick2 << " wyrzucił " << liczba5 << " oraz " << liczba6 << endl;
+		cout << "Gracz " << nick3 << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+		suma = liczba + liczba2;
+		suma1 = liczba3 + liczba4;
+		suma2 = liczba5 + liczba6;
+		suma3 = liczba7 + liczba8;
+
+		getchar();
+		cout << "Suma gracza " << nickname << " " << suma << endl;
+		cout << "Suma gracza " << nick1 << " " << suma1 << endl;
+		cout << "Suma gracza " << nick2 << " " << suma2 << endl;
+		cout << "Suma gracza " << nick3 << " " << suma3 << endl;
+		Sleep(3500);
+		getchar();
+		if (suma > suma1 && suma>suma2 && suma>suma3) {
+			cout << "Gracz " << nickname << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma < suma1 && suma2 <suma1 && suma3 <<suma1) {
+			cout << "Gracz " << nick1 << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma < suma2 && suma1 < suma2 && suma3 < suma2) {
+			cout << "Gracz " << nick2 << " wygrywa runde: " << i + 1 << endl;
+		}
+		else if (suma < suma3 && suma1 < suma3 && suma < suma3) {
+			cout << "Gracz " << nick3 << " wygrywa runde: " << i + 1 << endl;
+		}
+
+		 if (suma == suma1 && suma1 == suma2 && suma2 == suma3) {
+			 srand(time(NULL));
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1;
+			 liczba11 = rand() % 6 + 1;
+			 liczba12 = rand() % 6 + 1;
+			 liczba13 = rand() % 6 + 1;
+			 liczba14 = rand() % 6 + 1;
+			 suma3 = liczba7 + liczba8;
+			 suma4 = liczba9 + liczba10;
+			 suma5 = liczba11 + liczba12;
+			 suma6 = liczba13 + liczba14;
+			cout << "Dodatkowy rzut! REMIS pomiędzy wszystkimi graczami " << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Gracz " << nick2 << " wyrzucił " << liczba11 << " oraz " << liczba12 << endl;
+			cout << "Gracz " << nick3 << " wyrzucił " << liczba13 << " oraz " << liczba14 << endl;
+			cout << "Suma gracza " << nickname << " " << suma3 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma4 << endl;
+			cout << "Suma gracza " << nick2 << " " << suma5 << endl;
+			cout << "Suma gracza " << nick3 << " " << suma6 << endl;
+			getchar();
+		}
+		else if (suma == suma1) {
+			 srand(time(NULL));
+			 liczba7 = rand() % 6 + 1;
+			 liczba8 = rand() % 6 + 1;
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1;
+			 suma = liczba7 + liczba8;
+			 suma1 = liczba9 + liczba10;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nickname << " oraz " << nick1 << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nickname << " " << suma << endl;
+			cout << "Suma gracza " << nick1 << " " << suma1 << endl;
+			getchar();
+		}
+		else if (suma1 == suma2) {
+			 srand(time(NULL));
+			 liczba7 = rand() % 6 + 1;
+			 liczba8 = rand() % 6 + 1;
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1;
+			 suma1 = liczba7 + liczba8;
+			 suma2 = liczba9 + liczba10;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nick1 << " oraz " << nick2 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick2 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma1 << endl;
+			cout << "Suma gracza " << nick2 << " " << suma2 << endl;
+			getchar();
+		}
+		else if (suma == suma2) {
+			 srand(time(NULL));
+			 liczba7 = rand() % 6 + 1;
+			 liczba8 = rand() % 6 + 1;
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nickname << " oraz " << nick2 << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick2 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nickname << " " << suma1 << endl;
+			cout << "Suma gracza " << nick2 << " " << suma2 << endl;
+			getchar();
+		}
+		else if (suma2 == suma3) {
+			 srand(time(NULL));
+			 liczba7 = rand() % 6 + 1;
+			 liczba8 = rand() % 6 + 1;
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1;
+			liczba15 = rand() % 6 + 1;
+			liczba16 = rand() % 6 + 1;
+			
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nick2 << " oraz " << nick3 << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick2 << " wyrzucił " << liczba15 << " oraz " << liczba16 << endl;
+			cout << "Suma gracza " << nick2 << " " << suma2 << endl;
+			cout << "Suma gracza " << nick3 << " " << suma3 << endl;
+			getchar();
+		}
+		else if (suma == suma3) {
+			 srand(time(NULL));
+			 liczba7 = rand() % 6 + 1;
+			 liczba8 = rand() % 6 + 1;
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1; 
+			 suma1 = liczba7 + liczba8;
+			 suma2 = liczba9 + liczba10;
+			 cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nickname << " oraz " << nick3 << endl;
+			cout << "Gracz " << nickname << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick3 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nickname << " " << suma1 << endl;
+			cout << "Suma gracza " << nick3 << " " << suma2 << endl;
+			getchar();
+		}
+		else if (suma3 == suma1) {
+			 srand(time(NULL));
+			 liczba7 = rand() % 6 + 1;
+			 liczba8 = rand() % 6 + 1;
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1;
+			 suma1 = liczba7 + liczba8;
+			 suma2 = liczba9 + liczba10;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nick1 << " oraz " << nick3 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick3 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma1 << endl;
+			cout << "Suma gracza " << nick3 << " " << suma2 << endl;
+			getchar();
+		}
+		else if (suma3 == suma1 && suma2==suma1) {
+			 srand(time(NULL));
+			 liczba7 = rand() % 6 + 1;
+			 liczba8 = rand() % 6 + 1;
+			 liczba9 = rand() % 6 + 1;
+			 liczba10 = rand() % 6 + 1;
+			cout << "Dodatkowy rzut! REMIS pomiędzy graczami " << nick1 << " oraz " << nick3 << endl;
+			cout << "Gracz " << nick1 << " wyrzucił " << liczba7 << " oraz " << liczba8 << endl;
+			cout << "Gracz " << nick3 << " wyrzucił " << liczba9 << " oraz " << liczba10 << endl;
+			cout << "Suma gracza " << nick1 << " " << suma1 << endl;
+			cout << "Suma gracza " << nick3 << " " << suma2 << endl;
+			getchar();
+		}
+		
+	}
+}
+
+void wybor1(){
+	cout << "Wpisz 1 aby rozpocząć rozgrywkę przed wami 6 rund niech wygra lepszy! (aby wyświetlić nowe rundy itd naciśnij enter)" << endl << endl;;
+	cin >> wybor;
+
+	if (wybor==1) {
+		if(liczbag == 2){
+			gracze2();
+		}
+		else if (liczbag == 3) {
+			gracze3();
+		}
+		else if (liczbag == 4) {
+			gracze4();
+		}
+	}
+	else {
+		cout << "Nie ma takiej możliwości spróbuj ponownie" << endl;
+		system("cls");
+		wybor1();
+	}
+}
+// main
+int main() {
+	setlocale(LC_CTYPE, "Polish");
+	srand(time(NULL));
+
+	gracze();
+	nick();
+	wybor1();
+
+	return 0;
+}
+
