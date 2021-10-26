@@ -1,0 +1,48 @@
+
+#include <iostream>
+using namespace std;
+
+struct rodzaj {
+	int hp;
+	int dmg;
+	int sila;
+	int mana;
+	int stamina;
+	int szczescie;
+	
+
+}
+
+
+
+
+int main()
+{
+	rodzaj Barbarzynca;
+	Barbarzynca.hp = 50; Barbarzynca.dmg = 25; Barbarzynca.sila = 20; Barbarzynca.mana = 100; Barbarzynca.stamina = 100; Barbarzynca.szczescie = 40;
+	rodzaj Łucznik;
+	Łucznik.hp = 25; Barbarzynca.dmg = 33; Barbarzynca.sila = 10; Barbarzynca.mana = 150; Barbarzynca.stamina = 70; Barbarzynca.szczescie = 70;
+	rodzaj Rycerz;
+	Rycerz.hp = 70; Rycerz.dmg = 30; Rycerz.sila = 15; Rycerz.mana = 0; Rycerz.stamina = 150; Rycerz.szczescie = 30;
+	rodzaj Szaman;
+
+	rodzaj Magik;
+
+	rodzaj Ork;
+
+	rodzaj Mnich;
+
+	rodzaj Ksiezniczka;
+
+	rodzaj Ninja;
+
+	rodzaj Sienki;
+
+
+
+	
+
+	cout << <<endl;
+}
+
+
